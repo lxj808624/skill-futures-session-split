@@ -1,0 +1,63 @@
+{
+  "root": "/Users/since/coding-projects/trading-ip-projects/skill-futures-session-split",
+  "path_convention": "相对路径以 root 为基准；不在 root 下的给出绝对路径",
+  "inputs": {
+    "config": [
+      "config/varieties.yaml",
+      "config/study.yaml"
+    ],
+    "data_cache": [
+      "outputs/raw/AG_minute.parquet",
+      "outputs/raw/AU_minute.parquet",
+      "outputs/raw/CU_minute.parquet",
+      "outputs/raw/IF_minute.parquet",
+      "outputs/raw/I_minute.parquet",
+      "outputs/raw/LC_minute.parquet",
+      "outputs/raw/MA_minute.parquet",
+      "outputs/raw/M_minute.parquet",
+      "outputs/raw/RB_minute.parquet",
+      "outputs/raw/SC_minute.parquet",
+      "outputs/raw/TA_minute.parquet",
+      "outputs/raw/T_minute.parquet"
+    ],
+    "args": {
+      "start": "20240102",
+      "end": "20251031",
+      "is_end": null,
+      "slippage_ticks": 1.0,
+      "tau": 0.01,
+      "exclude_roll": false,
+      "config_dir": null,
+      "raw_dir": "outputs/raw",
+      "out_dir": "outputs/is_oos_b12"
+    }
+  },
+  "outputs": [
+    "outputs/is_oos_b12/attribution_check.csv",
+    "outputs/is_oos_b12/baseline_compare.csv",
+    "outputs/is_oos_b12/data_quality.csv",
+    "outputs/is_oos_b12/is_oos.csv",
+    "outputs/is_oos_b12/panel_daily.csv",
+    "outputs/is_oos_b12/rank_flip.csv",
+    "outputs/is_oos_b12/series_B0.csv",
+    "outputs/is_oos_b12/series_B1.csv",
+    "outputs/is_oos_b12/series_B2.csv",
+    "outputs/is_oos_b12/series_B3.csv",
+    "outputs/is_oos_b12/series_D1.csv",
+    "outputs/is_oos_b12/summary.csv",
+    "outputs/is_oos_b12/yearly_B0.csv",
+    "outputs/is_oos_b12/yearly_B1.csv",
+    "outputs/is_oos_b12/yearly_B2.csv",
+    "outputs/is_oos_b12/yearly_B3.csv",
+    "outputs/is_oos_b12/yearly_D1.csv",
+    "outputs/is_oos_b12/fingerprint.json"
+  ],
+  "rules": [
+    "B0",
+    "B1",
+    "B2",
+    "B3",
+    "D1"
+  ],
+  "roll_days_excluded": 0
+}
