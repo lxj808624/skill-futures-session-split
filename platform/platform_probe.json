@@ -1,0 +1,30 @@
+{
+ "mcp_endpoint": "https://pandadatamcp.pandaaiquant.com/mcp",
+ "token_source": "QuantStudio 平台 OAuth",
+ "probed_at": "2026-11-18T00:53:59",
+ "runs": [
+  {
+   "method": "get_future_min",
+   "args": {
+    "contract": "RB2401.SHF",
+    "freq": "1m",
+    "start_date": "2024-01-02",
+    "end_date": "2024-01-05"
+   },
+   "n_rows": -1,
+   "status": "empty"
+  },
+  {
+   "method": "get_future_dominant",
+   "args": {
+    "underlying_symbol": "RB",
+    "start_date": "2024-01-02",
+    "end_date": "2024-01-31"
+   },
+   "n_rows": 0,
+   "status": "empty"
+  }
+ ],
+ "finding": "提交前复测：分钟线与主力映射接口返回空（与 11-17 同参数），服务端状态变化；冻结数据以 11-17 快照为准（outputs/raw/*.parquet）。",
+ "conclusion": "平台令牌有效（接口有响应而非 401）；空返回属服务端数据状态，已列入失败边界。"
+}
