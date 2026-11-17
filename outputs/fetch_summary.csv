@@ -1,0 +1,10 @@
+code,rows,day_first,day_last,file
+I,5703,20250701,20251031,I_minute.parquet
+M,5703,20250701,20251031,M_minute.parquet
+TA,5703,20250701,20251031,TA_minute.parquet
+MA,5703,20250701,20251031,MA_minute.parquet
+SC,9147,20250701,20251031,SC_minute.parquet
+CU,40482,20240102,20251031,CU_minute.parquet
+LC,19890,20240102,20251031,LC_minute.parquet
+IF,21216,20240102,20251031,IF_minute.parquet
+T,22542,20240102,20251031,T_minute.parquet
