@@ -1,0 +1,5 @@
+symbol,days,usable_days,incomplete_days,no_night_days,night_bar_mean,day_bar_mean
+RB,429,429,0,0,24.0,45.0
+CU,429,429,0,0,48.0,45.0
+I,429,429,0,0,24.0,45.0
+SC,429,429,0,0,66.0,45.0
