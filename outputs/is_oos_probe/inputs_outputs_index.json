@@ -1,0 +1,52 @@
+{
+  "inputs": {
+    "config": [
+      "config/varieties.yaml",
+      "config/study.yaml"
+    ],
+    "data_cache": [
+      "/private/tmp/raw_full/I_minute.parquet",
+      "/private/tmp/raw_full/RB_minute.parquet",
+      "/private/tmp/raw_full/SC_minute.parquet"
+    ],
+    "args": {
+      "start": "20210104",
+      "end": "20251031",
+      "is_end": null,
+      "slippage_ticks": 1.0,
+      "tau": 0.01,
+      "exclude_roll": false,
+      "config_dir": null,
+      "raw_dir": "/tmp/raw_full",
+      "out_dir": "outputs/is_oos_probe"
+    }
+  },
+  "outputs": [
+    "/Users/since/coding-projects/trading-ip-projects/skill-futures-session-split/outputs/is_oos_probe/attribution_check.csv",
+    "/Users/since/coding-projects/trading-ip-projects/skill-futures-session-split/outputs/is_oos_probe/baseline_compare.csv",
+    "/Users/since/coding-projects/trading-ip-projects/skill-futures-session-split/outputs/is_oos_probe/data_quality.csv",
+    "/Users/since/coding-projects/trading-ip-projects/skill-futures-session-split/outputs/is_oos_probe/is_oos.csv",
+    "/Users/since/coding-projects/trading-ip-projects/skill-futures-session-split/outputs/is_oos_probe/panel_daily.csv",
+    "/Users/since/coding-projects/trading-ip-projects/skill-futures-session-split/outputs/is_oos_probe/rank_flip.csv",
+    "/Users/since/coding-projects/trading-ip-projects/skill-futures-session-split/outputs/is_oos_probe/series_B0.csv",
+    "/Users/since/coding-projects/trading-ip-projects/skill-futures-session-split/outputs/is_oos_probe/series_B1.csv",
+    "/Users/since/coding-projects/trading-ip-projects/skill-futures-session-split/outputs/is_oos_probe/series_B2.csv",
+    "/Users/since/coding-projects/trading-ip-projects/skill-futures-session-split/outputs/is_oos_probe/series_B3.csv",
+    "/Users/since/coding-projects/trading-ip-projects/skill-futures-session-split/outputs/is_oos_probe/series_D1.csv",
+    "/Users/since/coding-projects/trading-ip-projects/skill-futures-session-split/outputs/is_oos_probe/summary.csv",
+    "/Users/since/coding-projects/trading-ip-projects/skill-futures-session-split/outputs/is_oos_probe/yearly_B0.csv",
+    "/Users/since/coding-projects/trading-ip-projects/skill-futures-session-split/outputs/is_oos_probe/yearly_B1.csv",
+    "/Users/since/coding-projects/trading-ip-projects/skill-futures-session-split/outputs/is_oos_probe/yearly_B2.csv",
+    "/Users/since/coding-projects/trading-ip-projects/skill-futures-session-split/outputs/is_oos_probe/yearly_B3.csv",
+    "/Users/since/coding-projects/trading-ip-projects/skill-futures-session-split/outputs/is_oos_probe/yearly_D1.csv",
+    "/Users/since/coding-projects/trading-ip-projects/skill-futures-session-split/outputs/is_oos_probe/fingerprint.json"
+  ],
+  "rules": [
+    "B0",
+    "B1",
+    "B2",
+    "B3",
+    "D1"
+  ],
+  "roll_days_excluded": 0
+}
