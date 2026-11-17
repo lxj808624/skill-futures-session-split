@@ -1,0 +1,30 @@
+{
+  "config": {
+    "varieties.yaml": "da4fcf2be905badcc8cf2a87ba464f02b64fdd1a1aa16d985c7b8bdf8c12cfdf",
+    "study.yaml": "a21a11e5531e6aed8ad48a76031c002c6eb6b58334a44bf344c35855c8ac68e5"
+  },
+  "data": {
+    "I_minute.parquet": "c5ccf8755632d73d91b023579c0b360667018119308c99fd6a9171b1927cfb62",
+    "RB_minute.parquet": "5a353a676c66e862f93d44af7731ef10962fde08de3a44e46256575e6a57521f",
+    "SC_minute.parquet": "387458cb2c9cf7c7dd39fbe684a98d97c87b1df63e1298fda229fcde8dd7d645"
+  },
+  "data_rows": {
+    "I_minute.parquet": 30186,
+    "RB_minute.parquet": 30186,
+    "SC_minute.parquet": 48204
+  },
+  "args": {
+    "start": "20210104",
+    "end": "20251031",
+    "is_end": null,
+    "slippage_ticks": 1.0,
+    "tau": 0.01,
+    "exclude_roll": false,
+    "config_dir": null,
+    "raw_dir": "/tmp/raw_full",
+    "out_dir": "outputs/is_oos_probe"
+  },
+  "tau": 0.01,
+  "is_end": "20241231",
+  "combined": "dd1929daf2cb86d2e4eab39e6c88a858a299d14b64396929c8d9282f426708ec"
+}
