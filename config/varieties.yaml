@@ -1,0 +1,98 @@
+# 12 个品种参数：乘数 / tick / 成本口径 / 交易所
+# 成本为常规假设（名义价值双边 bp + 滑点 tick），非 Q2 实测口径，见 references/cost-model.md
+
+varieties:
+  - code: RB
+    exchange: SHF
+    name: 螺纹钢
+    multiplier: 10
+    tick: 1
+    commission_bp: 2.0
+    night: true
+    night_end: "23:00"
+  - code: CU
+    exchange: SHF
+    name: 沪铜
+    multiplier: 5
+    tick: 1
+    commission_bp: 2.0
+    night: true
+    night_end: "01:00"
+  - code: AU
+    exchange: SHF
+    name: 黄金
+    multiplier: 100
+    tick: 0.02
+    commission_bp: 2.0
+    night: true
+    night_end: "02:30"
+  - code: AG
+    exchange: SHF
+    name: 白银
+    multiplier: 15
+    tick: 1
+    commission_bp: 2.0
+    night: true
+    night_end: "02:30"
+  - code: I
+    exchange: DCE
+    name: 铁矿石
+    multiplier: 100
+    tick: 0.5
+    commission_bp: 2.0
+    night: true
+    night_end: "23:00"
+  - code: M
+    exchange: DCE
+    name: 豆粕
+    multiplier: 10
+    tick: 1
+    commission_bp: 2.0
+    night: true
+    night_end: "23:00"
+  - code: TA
+    exchange: CZC
+    name: PTA
+    multiplier: 5
+    tick: 2
+    commission_bp: 2.0
+    night: true
+    night_end: "23:00"
+  - code: MA
+    exchange: CZC
+    name: 甲醇
+    multiplier: 10
+    tick: 1
+    commission_bp: 2.0
+    night: true
+    night_end: "23:00"
+  - code: SC
+    exchange: INE
+    name: 原油
+    multiplier: 1000
+    tick: 0.1
+    commission_bp: 2.0
+    night: true
+    night_end: "02:30"
+  - code: LC
+    exchange: GFE
+    name: 碳酸锂
+    multiplier: 1
+    tick: 20
+    commission_bp: 2.0
+    night: true
+    night_end: "23:00"
+  - code: IF
+    exchange: CFE
+    name: 沪深300
+    multiplier: 300
+    tick: 0.2
+    commission_bp: 1.0
+    night: false
+  - code: T
+    exchange: CFE
+    name: 十年国债
+    multiplier: 10000
+    tick: 0.005
+    commission_bp: 1.0
+    night: false
