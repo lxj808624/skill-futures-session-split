@@ -1,0 +1,48 @@
+{
+  "config": {
+    "varieties.yaml": "da4fcf2be905badcc8cf2a87ba464f02b64fdd1a1aa16d985c7b8bdf8c12cfdf",
+    "study.yaml": "a21a11e5531e6aed8ad48a76031c002c6eb6b58334a44bf344c35855c8ac68e5"
+  },
+  "data": {
+    "AG_minute.parquet": "3d578779d1122e74f91ec8f15296024fa97001d17a7ecaea75becd7f0b028f9d",
+    "AU_minute.parquet": "cb9761433de635067be1b2b3ae5262976ba76c9382bb8f1ebc6dc09981c65f8d",
+    "CU_minute.parquet": "290be2f3632c68b26c2b4fc986f2cc2c16ffe9fef64ab9565d950617bdaba28c",
+    "IF_minute.parquet": "035ea739e155ca4e3061ff00e5fa0f0769ea21e0b1bca267f6fdb5233315bf5c",
+    "I_minute.parquet": "c5ccf8755632d73d91b023579c0b360667018119308c99fd6a9171b1927cfb62",
+    "LC_minute.parquet": "9a13ade1ab3b8069efb3a6aa353cdef7d26ba10178bb87aca58435a9cfb175f6",
+    "MA_minute.parquet": "a85755b05ccb1cb9c584fb4011b9d7c0e2d00d721632bf1fc183ca99cac9aa9c",
+    "M_minute.parquet": "3f70cf57c93643d9bb85865820f1b3d6e9cf38c07c5c1aeabe7c4464c8c6ec1d",
+    "RB_minute.parquet": "5a353a676c66e862f93d44af7731ef10962fde08de3a44e46256575e6a57521f",
+    "SC_minute.parquet": "387458cb2c9cf7c7dd39fbe684a98d97c87b1df63e1298fda229fcde8dd7d645",
+    "TA_minute.parquet": "5466d07c541b5f61e82b0b2538c75b1da9d731f24e410e315f4db3f648a6f2ce",
+    "T_minute.parquet": "2f31033a668d216cfac626462a13b6f505a2c6c1d543da27c00b0e9e4c1b0943"
+  },
+  "data_rows": {
+    "AG_minute.parquet": 48204,
+    "AU_minute.parquet": 48204,
+    "CU_minute.parquet": 40482,
+    "IF_minute.parquet": 21216,
+    "I_minute.parquet": 30186,
+    "LC_minute.parquet": 19890,
+    "MA_minute.parquet": 30186,
+    "M_minute.parquet": 30186,
+    "RB_minute.parquet": 30186,
+    "SC_minute.parquet": 48204,
+    "TA_minute.parquet": 30186,
+    "T_minute.parquet": 22542
+  },
+  "args": {
+    "start": "20250701",
+    "end": "20251031",
+    "is_end": null,
+    "slippage_ticks": 1.0,
+    "tau": 0.01,
+    "exclude_roll": false,
+    "config_dir": null,
+    "raw_dir": "outputs/raw",
+    "out_dir": "outputs"
+  },
+  "tau": 0.01,
+  "is_end": "20241231",
+  "combined": "df1b712ad047e848197a933265d5be19fd9870a581b787ef1aad356184fe3d8c"
+}
