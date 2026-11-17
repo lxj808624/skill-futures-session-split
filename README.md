@@ -85,3 +85,9 @@ python3.12 -m venv .venv && .venv/bin/pip install -r requirements.txt
 
 - `fetch_minute.py` 的换月切段逻辑未在真实授权下运行过；`get_future_dominant` 返回字段做了自适应，首次真实取数需人工核对。
 - 12 个品种的手续费 bp 为常规假设，未与交易所实际费率逐项核对。
+
+## 仓库说明
+
+- 本仓库**不含**分钟行情原始缓存（`outputs/raw/*.parquet`，约 10MB，且属平台授权数据不宜二次分发）；用 `scripts/fetch_real.py` 可从平台 MCP 完整重建。
+- 报告 §4.5 专门交代了统计显著性与检验能力：样本 A 的 83 天只能分辨约 18bp/日 的差异，**B2 跳空门控的 +13.89% 与 0 无法区分**（t=1.01，bootstrap 区间跨零）；全研究唯一统计显著的结果是「仅日盘持有亏钱」（OOS −7.00bp/日，t=−2.58）。
+- 平台一键运行不满足（issue #24 / PR #25）；期货模拟赛未连接账户，等价回放范围见报告 §9。
