@@ -1,0 +1,9 @@
+# 研究参数（冻结，改动会改变版本指纹）
+
+tau: 0.01                  # 跳空门控阈值先验 1%
+tau_grid: [0.0025, 0.005, 0.01, 0.02]
+is_end: 20241231           # 样本内截止日
+slippage_levels: [0, 1, 2]
+min_day_bars: 30
+bootstrap_block: 20
+bootstrap_iter: 2000
