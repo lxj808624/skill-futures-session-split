@@ -62,17 +62,33 @@
  ],
  "roll_days_excluded": 0,
  "v3_corrected_files": [
+  "outputs/summary.csv",
+  "outputs/is_oos.csv",
+  "outputs/series_B0.csv",
+  "outputs/series_B1.csv",
+  "outputs/series_B2.csv",
+  "outputs/series_B3.csv",
+  "outputs/series_D1.csv",
+  "outputs/rank_flip.csv",
+  "outputs/sensitivity_tau.csv",
+  "outputs/sensitivity_slip.csv",
+  "outputs/is_oos_b4_v3.csv",
   "outputs/summary_v3.csv",
   "outputs/is_oos_v3.csv",
   "outputs/cost_audit_corrected.json"
  ],
  "v3_scripts": [
   "scripts/evaluate.py",
-  "scripts/cost_audit.py"
+  "scripts/cost_audit.py",
+  "scripts/rerun_v3.py"
  ],
  "v3_docs": [
   "docs/成本口径修正.md",
   "review/round-6-cost-audit.md"
  ],
- "version_note": "v3：成本记账修正（B0 扣自身往返成本；B2/B3 成本改记交易日）；v3 数字以 summary_v3.csv / is_oos_v3.csv / docs/成本口径修正.md 为准，summary.csv 等为 v2 留痕"
+ "version_note": "v3：等成本口径。主产物已覆盖重算；v2 主产物与样本级汇总表全部归档到 outputs/archive/v2/，包内不存在活跃的 v2 数字。ex_roll（剔除换月±1日）口径 v3 未重算，不进入结论。",
+ "archive": [
+  "outputs/archive/v2/（v2 主产物：summary/is_oos/rank_flip/series/baseline_compare）",
+  "outputs/archive/v2/samples_b12/、samples_b4/、samples_probe/（v2 样本级汇总表；对应目录现场仅保留 panel_daily.csv 等复算输入）"
+ ]
 }
