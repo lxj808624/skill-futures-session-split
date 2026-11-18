@@ -23,10 +23,10 @@ quantSkills:
   - codex
   - openclaw
   - cursor
-  status: 已交付 v2（12 品种 / 22 个月真实数据全量重跑；平台内一键运行受宿主故障限制，见报告第 7 节）
+  status: 已交付 v3（12 品种 / 22 个月真实数据全量重跑；v3 修正成本记账：B0 扣自身往返成本、B2/B3 成本改记在交易日；平台内一键运行受宿主故障限制，见报告第 7 节）
   validation_level: real-data-verified
   maintainer_type: community
-  summary_zh: 期货时段拆分：把同一信号的收益拆成夜盘 / 日盘 / 闭市跳空三段，对比全天持有、仅日盘、跳空门控隔夜三种持仓窗口，检验成本敏感性、交易日归属正确性与样本外稳定性，并给出排名翻转检查。12 品种 / 22 个月真实分钟线（399,672 行）实测结论：仅日盘持有稳定亏钱（其中 6.44bp/日 为纯成本），全天持有符号随区间翻；「夜盘赚钱」是 LC/AG/AU/IF 的品种 β（占 92.8%），不是时段 α。夜盘交易日归属直接采用平台 trading_date 字段。
+  summary_zh: 期货时段拆分：把同一信号的收益拆成夜盘 / 日盘 / 闭市跳空三段，对比全天持有、仅日盘、跳空门控隔夜三种持仓窗口，检验成本敏感性、交易日归属正确性与样本外稳定性，并给出排名翻转检查。12 品种 / 22 个月真实分钟线（399,672 行）实测（等成本口径，v3）：五条规则全样本全部为负——全天持有 -11.42%、仅日盘 -22.70%（t=-3.99）、跳空门控 -18.02%、夜盘动量 -21.38%、跳空过滤日盘 -20.98%（t=-4.06）；唯一统计显著的结构是「日盘暴露亏钱」。样本 A（83 天）全天持有 +8.93%/年、t=0.55 与 0 无法区分，「夜盘赚钱」是 LC/AG/AU/IF 的品种 β（占 92.8%），不是时段 α。夜盘交易日归属直接采用平台 trading_date 字段。v3 修正了 v2 的两处成本记账错误（B0 未扣自身往返成本、B2/B3 成本记在空仓日），见 docs/成本口径修正.md。
   summary_en: Splits futures returns into night session, day session and the close-to-open gap, then compares full-day, day-only and gap-gated overnight holding under one frozen signal, with cost sensitivity, trading-date attribution and out-of-sample stability, plus a rank-flip check. Uses PandaData minute bars; night sessions inherit the platform's own trading_date.
   license: MIT
   repository: https://github.com/lxj808624/trading-ip
