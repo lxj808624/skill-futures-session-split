@@ -63,20 +63,26 @@ def rule_returns(panel: pd.DataFrame, rule: str, tau: float = 0.01) -> pd.DataFr
     prev_night_up = night.shift(1) > 0       # 滞后一期，无前视
 
     if rule == "B0":
+        # 修正（v3）：全天持有同样是「夜盘开仓 + 日盘收盘平仓」= 1 个往返，
+        # 旧版把 turns 记为 0，使基准不带成本、与其他规则不可比。
         gross = df["r_full"]
-        turns = 0.0
+        turns = 1.0
     elif rule == "B1":
         gross = day
         turns = 1.0
     elif rule == "B2":
         # 跳空门控：夜盘开盘跳空收敛才持有夜盘段；跳空本身不计入收益
         gross = day + np.where(gap & has_night, night, 0.0)
-        turns = np.where(gap & has_night, 0.0, 1.0)
+        # 修正（v3）：B2 每天都做日盘（达标时连做夜盘），每天 1 个往返；
+        # 旧版写反成「持仓 0、空仓 1」，把成本记在空仓日。
+        turns = 1.0
     elif rule == "B3":
         # 夜盘动量门控：前一交易日夜盘上涨才顺势过夜（含跳空段）
         keep = prev_night_up & has_night
         gross = day + np.where(keep, night + df["r_gap"].fillna(0.0), 0.0)
-        turns = np.where(keep, 0.0, 1.0)
+        # 修正（v3）：B3 每天都做日盘（门控通过时连做夜盘+跳空），每天 1 个往返；
+        # 旧版同样写反。保守起见不对「跨日连续持仓」折减换手。
+        turns = 1.0
     elif rule == "D1":
         # 跳空过滤日盘：跳空收敛才做当日日盘
         gross = np.where(gap, day, 0.0)
